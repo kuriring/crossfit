@@ -6,7 +6,7 @@ export default function HomeScreen() {
   const [showDetailedView, setShowDetailedView] = useState(false);
 
   const percentages = showDetailedView
-    ? Array.from({ length: 21 }, (_, i) => 100 - i) // 100% to 80% in 1% increments
+    ? Array.from({ length: 31 }, (_, i) => 105 - i) // 105% to 75% in 1% increments
     : Array.from({ length: 15 }, (_, i) => 100 - i * 5);
 
   const calculateWeightInLbs = (percentage) => {
@@ -30,7 +30,7 @@ export default function HomeScreen() {
         onPress={() => setShowDetailedView(!showDetailedView)}
       >
         <Text style={styles.buttonText}>
-          {showDetailedView ? "Show 5% Increments" : "Show 1% Increments"}
+          {showDetailedView ? "Show 5% Increments" : "Show 1% Increments (105% - 75%)"}
         </Text>
       </TouchableOpacity>
       <FlatList
